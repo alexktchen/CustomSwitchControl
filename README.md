@@ -1,4 +1,4 @@
-## CustomSwitchControll
+## CustomSwitchControl
 
 黑色風格的 switch
 
