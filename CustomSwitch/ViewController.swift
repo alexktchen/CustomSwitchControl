@@ -12,13 +12,16 @@ class ViewController: UIViewController {
 
     @IBOutlet var customSwitch: CustomSwitchControl!
     
+  
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        customSwitch = CustomSwitchControl(frame: CGRectZero)
+        
         customSwitch.center = CGPointMake(self.view.bounds.size.width * 0.5, self.view.bounds.size.height * 0.5 + 70)
         customSwitch.addTarget(self, action: "switchChanged:", forControlEvents: UIControlEvents.ValueChanged)
 
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +30,14 @@ class ViewController: UIViewController {
     }
 
     func switchChanged(sender: CustomSwitchControl) {
+        
+        if(sender.on){
+            label.text = "on"
+        }else{
+            label.text = "off"
+        }
+        
+        
         println("Changed value to: \(sender.on)")
     }
 
