@@ -2,5 +2,5 @@
 
 黑色風格的 switch
 
-![alt tag](https://github.com/alexktchen/CustomSwitchControll/blob/master/demo1.png)
-![alt tag](https://github.com/alexktchen/CustomSwitchControll/blob/master/demo2.png)
+<img src="https://github.com/alexktchen/CustomSwitchControll/blob/master/demo1.png" alt="alt text" style="width:whatever;height:whatever">
+
