@@ -269,7 +269,7 @@ import QuartzCore
         
         UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut | UIViewAnimationOptions.BeginFromCurrentState, animations: {
                 if self.on {
-                    self.thumbView.frame = CGRectMake(self.bounds.size.width - (activeKnobWidth + 1)-5, self.thumbView.frame.origin.y, activeKnobWidth+5, self.thumbView.frame.size.height)
+                    self.thumbView.frame = CGRectMake(self.bounds.size.width - (activeKnobWidth + 1) - 3, self.thumbView.frame.origin.y, activeKnobWidth, self.thumbView.frame.size.height)
                   
                 }
                 else {
@@ -353,7 +353,10 @@ import QuartzCore
                 
             }
             else {
+                 let normalKnobWidth = frame.size.height - 2 - 4
+                self.backgroundView.backgroundColor = UIColor.clearColor()
                 thumbView.frame = CGRectMake(1, 1, normalKnobWidth, normalKnobWidth)
+                self.thumbView.frame = CGRectMake(4, 3, normalKnobWidth, self.thumbView.frame.size.height);
             }
             
             let radius = self.isRounded ? (frame.size.height * 0.5) - 1 : 2
@@ -414,10 +417,10 @@ import QuartzCore
         }
         else {
             if self.tracking {
-                thumbView.frame = CGRectMake(self.bounds.size.width - (activeKnobWidth + 10), thumbView.frame.origin.y, activeKnobWidth, thumbView.frame.size.height)
+                thumbView.frame = CGRectMake(self.bounds.size.width - activeKnobWidth, thumbView.frame.origin.y, activeKnobWidth, thumbView.frame.size.height)
             }
             else {
-                thumbView.frame = CGRectMake(self.bounds.size.width - (normalKnobWidth + 10), thumbView.frame.origin.y, normalKnobWidth, thumbView.frame.size.height)
+                thumbView.frame = CGRectMake(self.bounds.size.width - normalKnobWidth, thumbView.frame.origin.y, normalKnobWidth, thumbView.frame.size.height)
             }
             
             onImageView.alpha = 1.0
